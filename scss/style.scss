@@ -1,0 +1,158 @@
+@import 'susy';
+
+$susy: (
+	container: 555px,
+	columns: 12,
+	gutters: .25,
+	math: fluid,
+	clearfix: true,
+	global-box-sizing: border-box
+);
+
+@include layout($susy);
+
+%screen-reader-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);  
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+@mixin button($bg, $color, $height) {
+  cursor:pointer;
+	background: $bg;
+	text-decoration:none;
+	color:$color;
+	padding: 0 1em;
+	line-height: $height;
+	transition: 0.3s ease-in-out;
+  border:none;
+  border-radius:0;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  @include font-smoothing;
+
+	&:hover {
+		background: darken($bg, 20%);
+	}	
+}
+.search-form {
+  position: absolute;
+  top:0;
+  left:0;
+}
+.container {
+  width:550px;
+  transform-style: preserve-3d;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  height:100px;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-size:100%;
+  font-weight: 300;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82015/kitten.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  @include font-smoothing;
+}
+
+.screen-reader-text {
+  @extend %screen-reader-text;
+}
+
+.mega-search {
+  width:100%;
+  background: rgba(#4c515a, 0.941);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  perspective: 800px;
+  height:210px;
+
+
+  fieldset {
+    width:100%;
+    color: #fff;
+
+    input[type=search] {
+      float:left;
+      width:495px;
+      background: transparent;
+      color: #fff;
+      border:none;
+      margin:0;
+      padding:0;
+      font-size: 18px;
+      line-height: 46px;
+      text-indent:12px;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      font-weight: 300;
+      @include font-smoothing;
+
+    &:focus {
+      border:none;
+      outline:none;
+    }
+  }
+
+  ::placeholder {
+    color: #fff;
+    font-weight:300;
+  }
+
+    .button {
+      width:55px;
+      float:right;
+      font-size: 18px;
+      @include button(transparent, #fff, 46px);
+      text-align: center;
+      
+      &:focus {
+        outline:none;
+      }
+    }
+  }  
+}
+
+.site {
+  transform: translateY(51px) translateX(-62px) translateZ(-200px);
+  .button {
+    display:none;
+  }  
+}
+
+hr {
+  border-width:1px 0 0 0;
+  border-color: rgba(#000, 0.25);
+  border-style: solid;
+  margin:0;
+  padding:0;
+  width: calc(90% - 15px);
+  position: absolute;
+  top:50%;
+  left: 15px;
+  transform: translateY(-50%) translateZ(1px);
+  
+}
+.masthead {
+  max-width:550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {
+  color: white;
+  font-size: 32px;
+  line-height:1.75;
+  font-weight: 400;
+  margin-bottom: 0.25em;
+}

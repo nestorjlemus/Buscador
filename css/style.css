@@ -1,0 +1,147 @@
+.screen-reader-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.search-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  width: 550px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100px;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/82015/kitten.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mega-search {
+  width: 100%;
+  background: rgba(76, 81, 90, 0.941);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  height: 210px;
+}
+.mega-search fieldset {
+  width: 100%;
+  color: #fff;
+}
+.mega-search fieldset input[type=search] {
+  float: left;
+  width: 495px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 46px;
+  text-indent: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.mega-search fieldset input[type=search]:focus {
+  border: none;
+  outline: none;
+}
+.mega-search fieldset ::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+.mega-search fieldset :-ms-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+.mega-search fieldset ::-ms-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+.mega-search fieldset ::placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+.mega-search fieldset .button {
+  width: 55px;
+  float: right;
+  font-size: 18px;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: none;
+  color: #fff;
+  padding: 0 1em;
+  line-height: 46px;
+  transition: 0.3s ease-in-out;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+.mega-search fieldset .button:hover {
+  background: rgba(0, 0, 0, 0);
+}
+.mega-search fieldset .button:focus {
+  outline: none;
+}
+
+.site {
+  -webkit-transform: translateY(51px) translateX(-62px) translateZ(-200px);
+          transform: translateY(51px) translateX(-62px) translateZ(-200px);
+}
+.site .button {
+  display: none;
+}
+
+hr {
+  border-width: 1px 0 0 0;
+  border-color: rgba(0, 0, 0, 0.25);
+  border-style: solid;
+  margin: 0;
+  padding: 0;
+  width: calc(90% - 15px);
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%) translateZ(1px);
+          transform: translateY(-50%) translateZ(1px);
+}
+
+.masthead {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: white;
+  font-size: 32px;
+  line-height: 1.75;
+  font-weight: 400;
+  margin-bottom: 0.25em;
+}
